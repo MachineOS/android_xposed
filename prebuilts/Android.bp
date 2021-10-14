@@ -1,0 +1,19 @@
+cc_prebuilt_library_shared {
+    name: "liblspd",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["lib/32/liblspd.so"],
+        },
+        android_arm64: {
+            srcs: ["lib/64/liblspd.so"],
+        },
+    },
+    init_rc: ["init.rc/lspd.rc"],
+    export_include_dirs: ["include"],
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+}

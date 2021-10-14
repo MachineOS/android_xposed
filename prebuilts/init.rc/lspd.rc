@@ -1,0 +1,7 @@
+service lspd /system/bin/app_process -Djava.class.path=/system/framework/lspd.dex -Dlsp.library.path=/system/lib64 /system/bin --nice-name=lspd org.lsposed.lspd.core.Main
+    user root
+    group root
+    seclabel u:r:su:s0
+
+on post-fs-data
+    start lspd
