@@ -33,5 +33,5 @@ namespace lspd {
             jboolean *,
             jboolean *);
 
-    extern "C" void specializeAppProcessPost(JNIEnv *env, jclass);
+    extern "C" void specializeAppProcessPost(JNIEnv *env, jint uid);
 }
